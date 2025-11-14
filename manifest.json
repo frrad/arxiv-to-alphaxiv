@@ -1,17 +1,18 @@
 {
-    "manifest_version": 3,
-    "name": "arXiv to AlphaXiv",
-    "version": "1.0",
-    "description": "Automatically redirects arXiv links to AlphaXiv.",
-    "permissions": [
-      "webNavigation",
-      "tabs"
-    ],
-    "host_permissions": [
-      "*://arxiv.org/*"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    }
+  "manifest_version": 3,
+  "name": "arXiv to AlphaXiv",
+  "version": "1.0",
+  "description": "Automatically redirects arXiv links to AlphaXiv.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "redirect_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
   }
-  
+}
