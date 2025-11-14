@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://alphaxiv.org\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://arxiv\\.org(.*)$",
+      "resourceTypes": ["main_frame"]
+    }
+  }
+]
